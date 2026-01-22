@@ -9,7 +9,7 @@ def isSubtree(root, subroot):
         dfs(root.left)
         dfs(root.right)
     
-    tree, subtree = [][]
+    tree, subtree = [], []
 
     dfs(root, tree)
     dfs(subroot, subtree)
