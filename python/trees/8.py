@@ -1,12 +1,12 @@
-def sameTree(t1, t2) -> bool:
-    if not t1 and not t2:
+def sameTree(p, q) -> bool:
+    if not p and not q:
         return True
-    elif not t1 or not t2:
+    elif not p or not q:
         return False
-    elif t1.val != t2.val:
+    elif p.val != q.val:
         return False
     
-    return sameTree(t1.left, t2.left) and sameTree(t1.right, t2.right)
+    return sameTree(p.left, q.left) and sameTree(p.right, q.right)
 
     # INSERT_YOUR_CODE
 class Node:
