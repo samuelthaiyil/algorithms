@@ -20,6 +20,8 @@ def searchInSorted(nums, target):
 
             if nums[mid] == target:
                 return mid
+            
+            # update search space
             elif nums[mid] < target:
                 left = mid + 1
             elif nums[mid] > target:

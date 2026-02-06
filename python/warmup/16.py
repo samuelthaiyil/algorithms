@@ -1,14 +1,8 @@
 def missingNumber(nums):
     nums.sort()
 
-    if nums[0] != 0:
-        return 0
+    for i in range(len(nums)):
+        if nums[i] != i:
+            return i
     
-    if nums[-1] != len(nums):
-        return len(nums)
-    
-    for i in range(1, len(nums) - 1):
-        expected = i
-
-        if nums[i] != expected:
-            return expected
+    return len(nums)

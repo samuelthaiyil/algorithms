@@ -1,18 +1,18 @@
 def validParentheses(s):
+    stack = []
     mappings = {
         ")": "(",
-        "}": "{",
-        "]": "["
+        "]": "[",
+        "}": "{"
     }
 
-    stack = []
-
-    for char in s:
-        if char not in mappings:
-            stack.append(char)
-        elif not stack or mappings[char] != stack.pop():
-            return False
-
+    for ch in s:
+        if ch not in mappings:
+            stack.append(ch)
+        else:
+            if not stack or stack.pop() != mappings[ch]:
+                return False
+    
     return not stack
+        
 
-validParentheses("()")
